@@ -1,0 +1,1 @@
+using BeerService as service from '../../srv/beer-service';

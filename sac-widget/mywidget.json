@@ -1,0 +1,57 @@
+{
+    "name": "CurrentWheatherWidget",
+    "description": "Can ChantGPT help me with that?",
+    "newInstancePrefix": "WheatherWidget",
+    "eula": "",
+    "vendor": "KGEKISS",
+    "license": "",
+    "id": "WheatherWidget",
+    "version": "1.0.1",
+    "icon": "/icon.png",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "custom-button-2",
+        "url": "/mywidget.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+      "width": {
+        "type": "integer",
+        "default": 192
+      },
+      "height": {
+        "type": "integer",
+        "default": 32
+      },
+      "city": {
+        "type": "string",
+        "default": "Riga,lv"
+      }
+    },
+    "methods": {
+        "getCity": {
+          "returnType": "string",
+          "description": "Get the current city",
+          "body": "return this.city;"
+        },
+        "setCity": {
+          "description": "Set the city",
+          "parameters": [
+            {
+                "name": "newCity",
+                "type": "string",
+                "description": "The new city"
+            }
+          ],
+          "body": "this.city = newCity;"
+        }
+      },
+      "events": {
+        "onClick": {
+          "description": "Called when the user clicks the button."
+        }
+      }
+    }
